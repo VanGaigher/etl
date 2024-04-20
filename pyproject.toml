@@ -6,9 +6,18 @@ authors = ["Vanessa Gaigher <vanessa.mat.sedu@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.10"
+pandas = "^2.2.2"
+google-cloud-bigquery = "^3.21.0"
+db-dtypes = "^1.2.0"
+
+
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+
+
