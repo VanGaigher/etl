@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from google.cloud import bigquery
 import glob
+import pandera as pa
 
 def load_settings_big_query():
     """
@@ -49,6 +50,11 @@ if __name__ == '__main__':
     # Execute a query to extract data from BigQuery
     query = """SELECT * FROM etl-project-416319.project_1.retail_df"""
     df = extract_data_from_bigquery(query)
+    schema_df = pa.infer_schema(df)
+    
+    with open("schema_df.py","w", encoding ="utf-8") as arquivo:
+        arquivo.write(schema_df.to_script())
+    
     print(df)
     
     
