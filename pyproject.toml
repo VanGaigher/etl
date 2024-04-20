@@ -14,6 +14,10 @@ pandera = "^0.18.3"
 pyyaml = "^6.0.1"
 black = "^24.4.0"
 frictionless = "^5.16.1"
+sqlalchemy = "^2.0.29"
+dotenv-python = "^0.0.1"
+python-dotenv = "^1.0.1"
+psycopg2 = "^2.9.9"
 
 
 
